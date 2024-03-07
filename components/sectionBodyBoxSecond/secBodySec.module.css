@@ -1,0 +1,44 @@
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+    margin-top: 2rem !important;
+}
+.displayContainer{
+    display: flex !important;
+    margin-top: 1rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.sliderHomePageChildBtn{
+    z-index: 4;
+    width: 25%;
+    height: 4rem;
+}
+.displayImg{
+    width: 95%;
+    height: 40rem;
+    object-fit: cover;
+}
+
+.boxBodyImgOne img{
+    width: 80%;
+    object-fit: cover;
+}
+
+.boxBodyFlexDir{
+    display: flex;
+    flex-direction: column;
+}
+.boxBodyFlexDir h6{
+    margin-top: 20px;
+}
+@media (max-width: 600px){
+    .displayImg{
+        width: 95%;
+        height: 15rem;
+    }
+    .boxBodyTextLine{
+        margin-bottom: 2rem !important;
+    }
+}

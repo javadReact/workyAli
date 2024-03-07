@@ -1,0 +1,19 @@
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+    margin-top: 2rem !important;
+}
+.boxBodyImgOne img{
+    width: 80%;
+    object-fit: cover;
+}
+@media (max-width: 600px){
+    .displayImg{
+        width: 95%;
+        height: 15rem;
+    }
+    .boxBodyTextLine{
+        margin-bottom: 2rem !important;
+    }
+}

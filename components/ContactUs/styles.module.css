@@ -1,0 +1,22 @@
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+    margin-top: 2rem !important;
+}
+.boxBodyFlexDir{
+    display: flex;
+    flex-direction: column;
+}
+
+.boxBodyFlexDir h6{
+    margin-top: 20px;
+}
+@media (max-width: 600px){
+    .displayImg{
+        height: 15rem;
+    }
+    .boxBodyTextLine{
+        margin-bottom: 2rem !important;
+    }
+}

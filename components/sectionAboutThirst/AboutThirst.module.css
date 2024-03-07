@@ -1,0 +1,25 @@
+.boxImgAbout{
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.boxImgAbout h4{
+    margin-top: 1rem;
+}
+
+.boxImgAbout p{
+    margin-top: 0.5rem;
+}
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+}
+
+@media (max-width: 1200px) {
+    .boxImgAbout img{
+        width: 95%;
+    }
+}

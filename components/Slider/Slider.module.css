@@ -1,0 +1,27 @@
+.sliderHomePage{
+    width: 100vw;
+    min-height: 100vh;
+    background-image:url("/images/slide-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color;
+    background-color: #00000060;
+}
+.sliderHomePageChild{
+    display: flex ;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderHomePageChildBtn{
+    width: 32%;
+    height: 4.5rem;
+    margin-top: 3rem !important;
+}
+
+.textSliderSecond{
+    font-size: 2.5rem;
+}
+/*responsive lg*/

@@ -1,0 +1,82 @@
+.bodySectionImgFirst{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/home-testimonials-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(247, 153, 43, 0.78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.warpbody{
+    padding: 3rem;
+}
+.mtSection{
+    margin-top: 5rem;
+}
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #fff;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.bodySectionImgSecond{
+    width: 100%;
+    height: 40rem;
+    background-color: black;
+}
+.bodySecchild{
+    padding-top: 6rem;
+    padding-left: 10rem;
+    flex-direction: column !important;
+}
+.parbodynth{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-weight: 100;
+}
+.sliderHomePageChildBtn{
+    z-index: 4;
+    width: 50%;
+    height: 4rem;
+}
+@media only screen and (max-width: 1200px){
+    .bodySectionImgFirst{
+        height: 35rem;
+    }
+    .bodySecchild{
+        padding-left: 9.5rem;
+    }
+    .bodySectionImgSecond{
+        height: 35rem;
+    }
+}
+@media (max-width: 900px){
+    .bodySecchild{
+        padding-left: 7rem;
+    }
+}
+@media (max-width: 600px){
+    .bodySectionImgFirst{
+        height: 70vh;
+    }
+    .bodySectionImgSecond{
+        height: 70vh !important;
+    }
+    .bodySecchild{
+        display: flex !important;
+        justify-content: center;
+        flex-direction: column !important;
+    }
+    .bodySecchild{
+        padding: 3rem;
+    }
+    .mtSection{
+        margin-top: 2rem;
+    }
+}

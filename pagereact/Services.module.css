@@ -1,0 +1,51 @@
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+}
+.boxBodyImgOne img{
+    margin-bottom: 2rem;
+     width: 70%;
+     object-fit: cover;
+ }
+.boxBodyThree{
+    width: 100%;
+    height: 50rem;
+    background: black;
+    padding-left: 11rem;
+    padding-top: 5rem;
+    padding-right: 3rem;
+}
+.boxBodyText{
+    width: 100%;
+    height: 22rem;
+    display: flex;
+}
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+}
+.boxBodyTextPar{
+    line-height: 1.8rem;
+    font-size: 17px;
+    font-weight: 100;
+    margin-top: 1.5rem;
+}
+.SendEmail{
+    flex-direction: column !important;
+    height: 100% !important;
+}
+.SendEmailGrid{
+    width: 100%;
+    background-color: #f7992b;
+}
+@media (max-width: 600px) {
+    .boxBodyThree{
+        padding-left: 5rem;
+        padding-top: 5rem;
+        padding-right: 3rem;
+        height: 40rem;
+    }
+
+}

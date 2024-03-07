@@ -1,0 +1,49 @@
+.slideAbout{
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slideAboutAdress{
+    direction: rtl;
+}
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+    margin-top:2rem;
+}
+.bodySectionImgSecond{
+    width: 100%;
+    height: 40rem;
+    background-color: black;
+}
+
+.BoxImageAbout{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.boxBodyTextPar{
+    line-height: 1.8rem;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.boxImgSer{
+    width: 50%;
+}
+@media (max-width: 900px) {
+    .slideAbout{
+        height: 65rem;
+    }
+    .boxImgSer{
+        width: 70%;
+    }
+}
+@media (max-width: 600px){
+    .slideAbout{
+        height: 95rem;
+    }
+}

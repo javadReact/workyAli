@@ -1,14 +1,20 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import {Inter} from "next/font/google";
 
-
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
+import Navbar from "../components/Navbar/Navbar";
+import Slider from "../components/Slider/Slider"
+import InfoWebSite from "@/components/sectionBodyBoxInfo";
+import SectionBodyBox from "@/components/sectionBodyBoxFirst";
+import SectionText from "@/components/sectionBodyBoxSecond";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  return (
-    <>
-      <h1>hi how are you</h1>
-    </>
-  );
+    return (
+        <>
+            <Slider/>
+            <InfoWebSite/>
+            <SectionBodyBox />
+            <SectionText />
+        </>
+    );
 }

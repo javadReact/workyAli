@@ -1,0 +1,17 @@
+.FooterImg{
+    background-image: url("/images/Group-2.1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.FooterThanks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #f7992b;
+}
+.imgFooter{
+    width: 100%;
+}

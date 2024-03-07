@@ -1,0 +1,14 @@
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+    margin-top: 2rem !important;
+}
+.boxBodyFlexDir{
+    display: flex;
+    flex-direction: column;
+}
+.boxBodyFlexDir h6{
+    color: black;
+    margin-top: 20px;
+}

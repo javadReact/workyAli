@@ -1,0 +1,34 @@
+.slideAbout{
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slideAboutAdress{
+    direction: rtl;
+}
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+}
+.bodySectionImgSecond{
+    width: 100%;
+    height: 40rem;
+    background-color: black;
+}
+
+.BoxImageAbout{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    .BoxImageAbout{
+        height: 160px;
+    }
+    .slideAbout{
+        height: 55rem;
+    }
+}

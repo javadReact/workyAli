@@ -1,0 +1,61 @@
+.Accr{
+    background-color: black !important;
+    color: white !important;
+}
+.BoxOneAccr{
+    width: 100%;
+    height: 40rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxBodyTextLine{
+    width: 20%;
+    height: 0.4rem;
+    background-color: #f7992b;
+}
+
+.bodySectionImgFirst{
+    width: 100%;
+    height: 50rem;
+    background-image: url("/images/home-testimonials-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(247, 153, 43, 0.78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -25rem;
+    position: relative;
+    z-index: 1
+}
+
+.color{
+    color: #ffffff;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column !important;
+}
+@media (max-width: 1200px) {
+    .color{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 600px){
+    .bodySectionImgFirst{
+        margin-top: 0;
+    }
+    .BoxOneAccr{
+        height: 40rem;
+    }
+    .bodySectionImgFirst{
+        height: 40rem;
+    }
+}

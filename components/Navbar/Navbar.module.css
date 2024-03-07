@@ -1,0 +1,16 @@
+.menu{
+    background-color: #3b3d42 !important;
+    z-index: 1331231312312313132132;
+}
+.navText{
+    font-size: 1rem;
+    padding: 5px;
+}
+@media (max-width: 600px){
+    .navText{
+        font-size: 1rem;
+    }
+}
+.itemMenu:hover{
+    color: #f7992b !important;
+}
