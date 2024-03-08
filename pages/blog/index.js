@@ -2,17 +2,18 @@ import {Inter} from "next/font/google";
 import {Box, Breadcrumbs, Button, Grid, Link, TextField, Typography} from "@mui/material";
 import styles from "./Blog.module.css"
 import Image from "next/image";
+
 const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
     return (
         <>
             <Grid container>
-                <Grid item xs />
-                <Grid item sm={9}>
+                <Grid item xs/>
+                <Grid item xs={9}>
                     <Grid container>
-                        <Grid item xs={12} sx={{width : "100%" , height : "7rem"}} />
-                        <Grid item xs={12} sx={{display : "flex" , justifyContent : "flex-end"}}>
+                        <Grid item xs={12} sx={{width: "100%", height: "7rem"}}/>
+                        <Grid item xs={12} sx={{display: "flex", justifyContent: "flex-end"}}>
                             <Breadcrumbs aria-label="breadcrumb">
                                 <Link underline="hover" color="common.black" href="/">
                                     Home
@@ -28,21 +29,22 @@ export default function Home() {
                         </Grid>
                     </Grid>
                     <Grid container>
-                        <Grid item xs={8}>
+                        <Grid item xs={12} md={12} lg={8}>
                             <Typography variant="h2" component="h1">
                                 Fitting a Square Building
                             </Typography>
-                            <Typography variant="h6" component="p" sx={{mt : 2}}>
+                            <Typography variant="h6" component="p" sx={{mt: 2}}>
                                 by : admin ---- date : April --- In : Uncategorized
                             </Typography>
-                            <Box sx={{ mt : 2 }}>
-                                <Image src="/images/about.jpg" alt="about" width="700" height="400"/>
+                            <Box sx={{mt: 2}}>
+                                <img src="/images/about.jpg" alt="about" className={styles.imgBlog}/>
                             </Box>
-                            <Typography variant="caption" component="p" sx={{width : "90%"}}>
-                                ssibilities, as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process.
+                            <Typography variant="caption" component="p" sx={{width: "90%"}}>
+                                ssibilities, as well as the environmental issues. Engineering and interior design
+                                solutions that we deliver are usually born after a collaborative process.
                             </Typography>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={12} md={12} lg={4}>
                             <Grid container>
                                 <Grid item xs={9}>
                                     <TextField
@@ -72,7 +74,7 @@ export default function Home() {
                                         RECENT COMMENTS
                                     </Typography>
                                     <hr className={styles.Line}/>
-                                    <Typography variant="h4" component="h1" sx={{ mb : 2}} className={styles.TitelCTA}>
+                                    <Typography variant="h4" component="h1" sx={{mb: 2}} className={styles.TitelCTA}>
                                         ARCHIVES
                                     </Typography>
                                     <Link href="/" passHref>
@@ -80,7 +82,7 @@ export default function Home() {
                                     </Link>
                                 </Grid>
                                 <Grid item xs={3}>
-                                <Button variant="contained" className={styles.BtnSubmit}>
+                                    <Button variant="contained" className={styles.BtnSubmit}>
                                         Submit
                                     </Button>
                                 </Grid>
@@ -90,6 +92,8 @@ export default function Home() {
                 </Grid>
                 <Grid item xs/>
             </Grid>
+
+
         </>
     );
 }
