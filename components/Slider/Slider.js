@@ -8,7 +8,7 @@ const Slider = () => {
                     WE BUILD THE FUTURE
                 </Typography>
                 <Typography variant="h2" component="h2" color="common.white" className={styles.textSliderSecond}>
-                    Best Ideas – Best Solution – Best Result
+                    Best Ideas – Best Solution – Best Result---
                 </Typography>
                 <Button variant="contained" className="BtnSite">VIEW MORE</Button>
             </Grid>
