@@ -37,10 +37,10 @@ export default function Home() {
                     <Grid item xs={9}>
                         <Toolbar sx={{height : "5.65rem" , py :0}}>
                             <Grid container>
-                                <Grid item xs={9} sx={{flexGrow : 1}}>
+                                <Grid item xs={11} sx={{flexGrow : 1}}>
                                     <Image src="/images/logo.webp" width="200" height="50" alt="Logo"/>
                                 </Grid>
-                                <Grid item xs={0} sm={3} sx={{display : {xs : "none" , sm : "flex"}}}>
+                                <Grid item xs={0} sm={1} sx={{display : {xs : "none" , sm : "flex"}}}>
                                     <Link href="/" passHref={false} className={styles.navText}>
                                         <Typography color="common.white">Home</Typography>
                                     </Link>
@@ -54,7 +54,7 @@ export default function Home() {
                                         <Typography color="common.white">Blog</Typography>
                                     </Link>
                                 </Grid>
-                                <Grid item xs={3} className={styles.justFay} sx={{display: {xs: "flex", sm: "none"}}}>
+                                <Grid item xs={1} className={styles.justFay} sx={{display: {xs: "flex", sm: "none"}}}>
                                     <NavDrawer />
                                 </Grid>
                             </Grid>
