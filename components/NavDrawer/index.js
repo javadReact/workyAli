@@ -11,7 +11,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import {useState} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
-import Link from "next/link";
+import Link from 'next/link'
 import {Typography} from "@mui/material";
 import styles from "./style.module.css";
 const navItems = [
@@ -41,15 +41,20 @@ export default function TemporaryDrawer() {
     const DrawerList = (
         <Box sx={{ width: 250  }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
-                {
-                    navItems.map((link) =>(
-                        <Link href={link.path} className={styles.navText} passHref>
-                            <Typography color="common.black" className={styles.navText}>{link.name}</Typography>
-                        </Link>
-                    ))
-                }
+                <Link href="/" passHref={false} className={styles.navText}>
+                    <Typography color="common.black">Home</Typography>
+                </Link>
+                <Link href="/about" passHref={false} className={styles.navText}>
+                    <Typography color="common.black">About</Typography>
+                </Link>
+                <Link href="/services" passHref={false} className={styles.navText}>
+                    <Typography color="common.black">Services</Typography>
+                </Link>
+                <Link href="/blog" passHref={false} className={styles.navText}>
+                    <Typography color="common.black">Blog</Typography>
+                </Link>
             </List>
-            <Divider />
+            <Divider/>
             <List>
             </List>
         </Box>

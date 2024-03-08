@@ -49,7 +49,7 @@ const Index = () => {
                         <Grid item xs />
                     </Grid>
                 </Grid>
-                <Grid xs/>
+                <Grid item xs/>
             </Grid>
         </>
     );
