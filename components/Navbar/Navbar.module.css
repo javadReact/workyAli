@@ -6,6 +6,10 @@
     font-size: 1rem;
     padding: 5px;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.justFay{
     justify-content: center;
     align-items: center;
 }

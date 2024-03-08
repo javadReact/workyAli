@@ -10,8 +10,8 @@ const Index = () => {
                 <Grid item xs={9} sx={{display : {xs  : "none" , sm : "block"}}}>
                     <Image src="/images/Group-2.1-1.png" width={980} height={250} className={styles.imgFooter} alt="Group"/>
                 </Grid>
-                <Grid item xs={9} sx={{display : {xs  : "block" , sm : "none"}}}>
-                    <Image src="/images/Group-2.1-1.png" width={600} height={100} className={styles.imgFooter} alt="Group"/>
+                <Grid item xs={12} sx={{display : {xs  : "block" , sm : "none"}}}>
+                    <img src="/images/Group-2.1-1.png" className={styles.imgFooterMobile} alt="Group"/>
                 </Grid>
                 <Grid item xs/>
             </Grid>

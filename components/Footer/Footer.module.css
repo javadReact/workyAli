@@ -14,4 +14,9 @@
 }
 .imgFooter{
     width: 100%;
+
+}
+.imgFooterMobile{
+    width: 20rem;
+    height: 5rem;
 }
