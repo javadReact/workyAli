@@ -37,8 +37,11 @@ export default function Home() {
                     <Grid item xs={9}>
                         <Toolbar sx={{height : "5.65rem" , py :0}}>
                             <Grid container>
-                                <Grid item xs={11} sx={{flexGrow : 1}}>
+                                <Grid item xs={11} sx={{display : {xs : "none" , sm : "flex" , flexGrow : 1}}}>
                                     <Image src="/images/logo.webp" width="200" height="50" alt="Logo"/>
+                                </Grid>
+                                <Grid item xs={11} sx={{display : {xs : "flex" , sm : "none" , flexGrow : 1} , justifyContent : "start" , alignItems : "center"}}>
+                                    <Image src="/images/logo.webp" width="155" height="40" alt="Logo"/>
                                 </Grid>
                                 <Grid item xs={0} sm={1} sx={{display : {xs : "none" , sm : "flex"}}}>
                                     <Link href="/" passHref={false} className={styles.navText}>
