@@ -7,7 +7,7 @@ const Index = () => {
     return (
         <>
             <Grid container className={styles.secPricesPlan}>
-                <Grid container sx={{mt: 6}}>
+                <Grid container sx={{mt: {xs : 0 , sm : 10}}}>
                     <Grid xs/>
                     <Grid item xs={9}>
                         <StylesCaptionTitel

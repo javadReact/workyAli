@@ -34,7 +34,8 @@
 }
 .SendEmail{
     flex-direction: column !important;
-    height: 100% !important;
+    height: 40rem !important;
+    margin-top: -7rem;
 }
 .SendEmailGrid{
     width: 100%;
@@ -42,7 +43,7 @@
 }
 @media (max-width: 600px) {
     .boxBodyThree{
-        padding-left: 5rem;
+        padding-left: 2rem;
         padding-top: 5rem;
         padding-right: 3rem;
         height: 40rem;

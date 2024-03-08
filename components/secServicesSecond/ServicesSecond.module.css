@@ -92,12 +92,15 @@
         height: 120rem;
     }
     .boxBtnView{
-        width: 100% !important;
+        width: 110% !important;
     }
     .boxBtnViewMore{
-        width: 100% !important;
+        width: 110% !important;
     }
     .displayPrices{
         margin-top: -25rem;
+    }
+    .boxPriceOne , .boxPriceTwo , .boxPriceThree{
+        margin-top: .5rem;
     }
 }

@@ -34,7 +34,7 @@ export default function Home() {
                         <Grid item xs className={styles.SendEmailGrid}>
                             <Grid container>
                                 <Grid item xs/>
-                                <Grid item xs={8} sx={{mt : 8 , height : {xs : "25rem"}}}>
+                                <Grid item xs={10} sx={{mt : 8 , height : {xs : "25rem"}}}>
                                     <StylesCaptionTitelList
                                         Color="common.white"
                                         STitel="ABOUT COMPANY"
