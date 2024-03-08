@@ -16,7 +16,7 @@ const Index = (props) => {
                             {props.PScaption}
                         </Typography>
                         <Grid container>
-                            <Grid item xs sx={{mt : 4}}>
+                            <Grid item xs sx={{mt : 4 }}>
                                 <Typography variant="caption" component="p" color={props.Color}>
                                     {props.PLcaption}
                                 </Typography>

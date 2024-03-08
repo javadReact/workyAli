@@ -4,7 +4,10 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link"
 import {useRouter} from "next/router";
+import Button from "@mui/material/Button";
+import Drawer from "@mui/material/Drawer";
 const inter = Inter({ subsets: ["latin"] });
+import NavDrawer from  "../NavDrawer";
 const navItems = [
     {
         path : "/",
@@ -23,7 +26,8 @@ const navItems = [
         name : "Blog"
     }
 ]
-// const router = useRouter();
+
+
 export default function Home() {
     return (
         <>
@@ -45,13 +49,9 @@ export default function Home() {
                                                 </Link>
                                         ))
                                     }
-                                {/*{*/}
-                                {/*    navItems.map(nav => (*/}
-                                {/*        <NavLink to={nav.path}>*/}
-                                {/*            <Typography color="common.white" className={styles.navText}>{nav.name}</Typography>*/}
-                                {/*        </NavLink>*/}
-                                {/*    ))*/}
-                                {/*}*/}
+                            </Grid>
+                            <Grid item xs sx={{display: {xs: "block", sm: "none"}}}>
+                                <NavDrawer />
                             </Grid>
                         </Toolbar>
                     </Grid>

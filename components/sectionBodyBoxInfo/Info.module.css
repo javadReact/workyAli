@@ -115,6 +115,7 @@
     }
     .bodyArchitecture , .bodyEngineering , .bodyInteriorDesign{
         height: 20rem !important;
+        margin-top: 2rem;
     }
     .BoxBodyImg{
         margin-top: 0!important;
