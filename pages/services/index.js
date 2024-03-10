@@ -8,12 +8,16 @@ import styles from "./Services.module.css";
 import StylesCaptionTitelList from "../../components/StylesCaptionTitelList";
 import ContactUs from "../../components/ContactUs";
 import React from "react";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Services Page</title>
+            </Head>
             <Navbar />
             <SecServicesFirst/>
             <SecServicesSecond/>

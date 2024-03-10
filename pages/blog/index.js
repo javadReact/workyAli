@@ -4,6 +4,7 @@ import styles from "./Blog.module.css"
 import Image from "next/image";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import Head from "next/head";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -12,12 +13,23 @@ export default function Home() {
     useEffect(()=>{
         axios.get("https://fakestoreapi.com/products")
             .then(res => {
-                setBlog(res.data.slice(0 , 4))
-                console.log(res.data.slice(0 , 4))
-            })
+                if(res.status === 200){
+                    setBlog(res.data.slice(0 , 4))
+                }
+
+            }).catch(res =>{
+                if(res.response.status === 400){
+                    alert("Betoche");
+                }
+        })
+
+
     },[])
     return (
         <>
+            <Head>
+                <title>Blog Page</title>
+            </Head>
             <Grid container>
                 <Grid item xs/>
                 <Grid item xs={9}>
@@ -42,7 +54,7 @@ export default function Home() {
                         <Grid item xs={12} md={12} lg={8} spacing={4}>
                             {
                                 blog.map(singleBlog => (
-                                    <Box key={singleBlog.id} sx={{my : 5}}>
+                                    <Box key={singleBlog.id} sx={{my: 5}}>
                                         <Typography variant="h2" component="h1">
                                             {singleBlog.title}
                                         </Typography>
@@ -56,11 +68,12 @@ export default function Home() {
                                             {singleBlog.description}
                                         </Typography>
 
-                                            <Link href={ "blog/" + singleBlog.id}>
-                                                <Button variant="outlined" sx={{mt : 3 , p : 1 , width : "7rem" , fontSize : "1rem"}}>
-                                                    seeMOre
-                                                </Button>
-                                            </Link>
+                                        <Link href={"blog/" + singleBlog.id}>
+                                            <Button variant="outlined"
+                                                    sx={{mt: 3, p: 1, width: "7rem", fontSize: "1rem"}}>
+                                                seeMOre
+                                            </Button>
+                                        </Link>
 
                                     </Box>
                                 ))
