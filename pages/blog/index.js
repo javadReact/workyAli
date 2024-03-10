@@ -2,10 +2,20 @@ import {Inter} from "next/font/google";
 import {Box, Breadcrumbs, Button, Grid, Link, TextField, Typography} from "@mui/material";
 import styles from "./Blog.module.css"
 import Image from "next/image";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
+    const [blog , setBlog] = useState([]);
+    useEffect(()=>{
+        axios.get("https://fakestoreapi.com/products")
+            .then(res => {
+                setBlog(res.data.slice(0 , 4))
+                console.log(res.data.slice(0 , 4))
+            })
+    },[])
     return (
         <>
             <Grid container>
@@ -29,20 +39,32 @@ export default function Home() {
                         </Grid>
                     </Grid>
                     <Grid container>
-                        <Grid item xs={12} md={12} lg={8}>
-                            <Typography variant="h2" component="h1">
-                                Fitting a Square Building
-                            </Typography>
-                            <Typography variant="h6" component="p" sx={{mt: 2}}>
-                                by : admin ---- date : April --- In : Uncategorized
-                            </Typography>
-                            <Box sx={{mt: 2}}>
-                                <img src="/images/about.jpg" alt="about" className={styles.imgBlog}/>
-                            </Box>
-                            <Typography variant="caption" component="p" sx={{width: "90%"}}>
-                                ssibilities, as well as the environmental issues. Engineering and interior design
-                                solutions that we deliver are usually born after a collaborative process.
-                            </Typography>
+                        <Grid item xs={12} md={12} lg={8} spacing={4}>
+                            {
+                                blog.map(singleBlog => (
+                                    <Box key={singleBlog.id} sx={{my : 5}}>
+                                        <Typography variant="h2" component="h1">
+                                            {singleBlog.title}
+                                        </Typography>
+                                        <Typography variant="h6" component="p" sx={{mt: 2}}>
+                                            price : {singleBlog.price} --- id : {singleBlog.id}
+                                        </Typography>
+                                        <Box sx={{mt: 2}}>
+                                            <img src={singleBlog.image} alt="about" className={styles.imgBlog}/>
+                                        </Box>
+                                        <Typography variant="caption" component="p" sx={{width: "90%"}}>
+                                            {singleBlog.description}
+                                        </Typography>
+
+                                            <Link href={ "blog/" + singleBlog.id}>
+                                                <Button variant="outlined" sx={{mt : 3 , p : 1 , width : "7rem" , fontSize : "1rem"}}>
+                                                    seeMOre
+                                                </Button>
+                                            </Link>
+
+                                    </Box>
+                                ))
+                            }
                         </Grid>
                         <Grid item xs={12} md={12} lg={4}>
                             <Grid container>
