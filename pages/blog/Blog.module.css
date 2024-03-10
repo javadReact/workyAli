@@ -14,5 +14,20 @@
     margin-bottom: 2rem;
 }
 .imgBlog{
-    width: 100%;
+    width: 50%;
+    margin-top: 3rem;
+    border: 3px solid #f7992b;
+    border-radius: 20px;
+    padding:3rem;
+}
+.SingleBlog{
+    width: 70%;
+    margin-top: 3rem;
+    border: 3px solid #f7992b;
+    border-radius: 20px;
+    padding:3rem;
+}
+.mtBlog{
+    margin-top: 3rem;
+
 }
