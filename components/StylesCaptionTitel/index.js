@@ -4,7 +4,7 @@ import {Grid, Typography} from "@mui/material";
 const Index = (props) => {
     return (
         <>
-            <Grid container sx={{height : {xs : "30rem" ,sm : "20rem"}}}>
+            <Grid container sx={{height : {xs : "fit-content" },my : 5}}>
                 <Grid container className={styles.boxBodyText} justifyContent="center">
                     <Grid item xs={12} sm={5}>
                         <Typography variant="h3" component="h3" color={props.Color}>{props.Stitel}</Typography>

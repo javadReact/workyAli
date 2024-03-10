@@ -16,6 +16,7 @@
 }
 .mtSection{
     margin-top: 5rem;
+    flex-direction: column !important;
 }
 .boxBodyTextLine{
     width: 20%;

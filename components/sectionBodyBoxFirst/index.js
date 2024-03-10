@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Grid, Typography} from "@mui/material";
 import styles from "./SectionBox.module.css";
 import StylesCaptionTitelList from "../StylesCaptionTitelList";
+import axios from "axios";
+import StylesCaptionTitel from "@/components/StylesCaptionTitel";
 
 const Index = () => {
+    const [cloth , setcloth] = useState([]);
+    const [clothBox , setclothBox] = useState([]);
+
+    useEffect(()=>{
+        axios.get("https://fakestoreapi.com/products")
+            .then(res => {
+                setcloth(res.data.slice(0 , 1))
+                setclothBox(res.data.slice(3 , 4))
+                console.log(cloth)
+            })
+    },[]);
     return (
         <>
             <Grid container sx={{my: { xs: 0, lg: "-5vw",sm : "-7vw"}, zIndex: 2, position: "relative"}}>
@@ -11,13 +24,17 @@ const Index = () => {
                 <Grid item xs={12} sm={6}>
                     <div className={styles.bodySectionImgFirst}>
                         <div className={styles.warpbody}>
-                            <StylesCaptionTitelList
-                                Color="common.white"
-                                STitel="TESTIMONIALS"
-                                MTitel="WHAT OUR"
-                                Bcaptiob="It is not every construction company that can build a building from ground up and complete 80,000 sq. ft. of first class office improvement space in 13 months."
-                                Quotation="KENT, POSTED ON EVERYWHERE"
-                            />
+                            {
+                                cloth.map((cloth , index) =>(
+                                    <StylesCaptionTitelList
+                                        key={index}
+                                        Color="common.white"
+                                        STitel={cloth.category}
+                                        MTitel={cloth.title}
+                                        Bcaptiob={cloth.description}
+                                    />
+                                ))
+                            }
                         </div>
                     </div>
                 </Grid>
@@ -29,13 +46,17 @@ const Index = () => {
                         <Grid item xs={9} sm={8}>
                             <Grid container className={styles.mtSection}>
                                 <Grid item xs={12}>
-                                    <StylesCaptionTitelList
-                                        Color="common.white"
-                                        STitel="TESTIMONIALS"
-                                        MTitel="WHAT OUR"
-                                        Bcaptiob="It is not every construction company that can build a building from ground up and complete 80,000 sq. ft. of first class office improvement space in 13 months."
-                                        Quotation="KENT, POSTED ON EVERYWHERE"
-                                    />
+                                    {
+                                        cloth.map((cloth , index) =>(
+                                            <StylesCaptionTitelList
+                                                key={index}
+                                                Color="common.white"
+                                                STitel={cloth.category}
+                                                MTitel={cloth.title}
+                                                Bcaptiob={cloth.description}
+                                            />
+                                        ))
+                                    }
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Button

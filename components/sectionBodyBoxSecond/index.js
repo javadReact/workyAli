@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Grid, TextField, Typography} from "@mui/material";
 import styles from "./secBodySec.module.css"
 import StylesCaptionTitel from "../StylesCaptionTitel";
 import ContactUs from "../ContactUs";
 import ComponentImg from "../ComponentImg";
+import axios from "axios";
+import StylesCaptionTitelList from "@/components/StylesCaptionTitelList";
 const Index = () => {
+    const [cloth , setcloth] = useState([]);
+    useEffect(()=>{
+        axios.get("https://fakestoreapi.com/products")
+            .then(res => {
+                setcloth(res.data.slice(10 , 11))
+            })
+    },[]);
     return (
         <>
             <Grid container>
@@ -13,12 +22,24 @@ const Index = () => {
                     <Grid container>
                         <Grid item xs/>
                         <Grid item xs={12} sm={9}>
-                            <StylesCaptionTitel
-                                Stitel="ABOUT COMPANY"
-                                Mtitel="WE CREATE AND TURN INTO REALITY"
-                                PScaption="All our team collaborates with our clients, across all of our 3 offices,All our team collaborates with our clients, across all of our 3 offices,"
-                                PLcaption="All our team collaborates with our clients, across all of our 3 offices, which are located throughout the US. Our mission is to implement the outstanding design ideas and solutions for any project we’re working on… During that process we carefully combine client’s guidelines, technical possibilities, as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process."
-                            />
+                            {
+                                cloth.map((cloth , index) =>(
+                                    <StylesCaptionTitel
+                                        key={index}
+                                        Stitel={cloth.category}
+                                        Mtitel={cloth.title}
+                                        PScaption={cloth.description}
+                                        PLcaption="All our team collaborates with our clients, across all of our 3 offices, which are located throughout the US. Our mission is to implement the outstanding design ideas and solutions for any project we’re working on… During that process we carefully combine client’s guidelines, technical possibilities, as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process."
+                                    />
+                                ))
+                            }
+                            {/*<StylesCaptionTitel*/}
+                            {/*    key={index}*/}
+                            {/*    Stitel={cloth.category}*/}
+                            {/*    Mtitel={cloth.title}*/}
+                            {/*    PScaption={cloth.description}*/}
+                            {/*    PLcaption="All our team collaborates with our clients, across all of our 3 offices, which are located throughout the US. Our mission is to implement the outstanding design ideas and solutions for any project we’re working on… During that process we carefully combine client’s guidelines, technical possibilities, as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process."*/}
+                            {/*/>*/}
                         </Grid>
                         <Grid item xs/>
                     </Grid>

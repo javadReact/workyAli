@@ -1,6 +1,6 @@
 .boxBodyText{
     width: 100%;
-    height: 22rem;
+    height: fit-content;
     display: flex;
     align-items: center;
 }
