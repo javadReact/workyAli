@@ -1,4 +1,3 @@
-import {Inter} from "next/font/google";
 import {Box, Breadcrumbs, Button, Grid, Link, TextField, Typography} from "@mui/material";
 import styles from "./Blog.module.css"
 import Image from "next/image";
@@ -6,25 +5,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import Head from "next/head";
 
-const inter = Inter({subsets: ["latin"]});
-
-export default function Home() {
-    const [blog , setBlog] = useState([]);
-    useEffect(()=>{
-        axios.get("https://fakestoreapi.com/products")
-            .then(res => {
-                if(res.status === 200){
-                    setBlog(res.data.slice(0 , 4))
-                }
-
-            }).catch(res =>{
-                if(res.response.status === 400){
-                    alert("Betoche");
-                }
-        })
-
-
-    },[])
+export default function Home({data}) {
     return (
         <>
             <Head>
@@ -53,7 +34,7 @@ export default function Home() {
                     <Grid container>
                         <Grid item xs={12} md={12} lg={8} spacing={4}>
                             {
-                                blog.map(singleBlog => (
+                                data.map(singleBlog => (
                                     <Box key={singleBlog.id} sx={{my: 5}}>
                                         <Typography variant="h2" component="h1">
                                             {singleBlog.title}
@@ -74,7 +55,6 @@ export default function Home() {
                                                 seeMOre
                                             </Button>
                                         </Link>
-
                                     </Box>
                                 ))
                             }
@@ -127,8 +107,22 @@ export default function Home() {
                 </Grid>
                 <Grid item xs/>
             </Grid>
-
-
         </>
     );
+}
+export const getServerSideProps = async () =>{
+    const data = await axios.get("https://fakestoreapi.com/products")
+        .then(res => {
+            if(res.status === 200){
+                return res.data.slice(0 , 5);
+            }
+
+        }).catch(() =>{
+            return "خطایی پیش آمد";
+        })
+    return{
+        props: {
+            data
+        }
+    }
 }

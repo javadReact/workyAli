@@ -6,19 +6,7 @@ import {Breadcrumbs, Grid, Link, Box, Typography} from "@mui/material";
 import Image from "next/image";
 import Head from "next/head";
 
-const SingleBlog = () => {
-    const {query} = useRouter();
-    const [data , setData] = useState({});
-    useEffect(() => {
-        if(query.id)
-        {
-            axios.get("https://fakestoreapi.com/products/" + query.id)
-                .then(res => {
-                    setData(res.data)
-                })
-        }
-    }, [query]);
-
+const SingleBlog = ({data}) => {
     return (
         <>
             <Head>
@@ -79,5 +67,20 @@ const SingleBlog = () => {
         </>
     );
 };
+export const getServerSideProps = async (request) =>{
+    const data = await axios.get("https://fakestoreapi.com/products/" + request.query.id)
+        .then(res => {
+            if(res.status === 200){
+                return res.data
+            }
 
+        }).catch(() =>{
+            return "خطایی پیش آمد";
+        })
+    return{
+        props: {
+            data : data
+        }
+    }
+}
 export default SingleBlog;
