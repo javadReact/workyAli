@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Grid, Typography} from "@mui/material";
+import {Button, Grid, Typography,Box} from "@mui/material";
 import styles from "./ServicesSecond.module.css";
 import StylesCaptionTitel from "../StylesCaptionTitel";
 
@@ -9,7 +9,7 @@ const Index = () => {
             <Grid container className={styles.secPricesPlan}>
                 <Grid container sx={{mt: {xs : 0 , sm : 10}}}>
                     <Grid xs/>
-                    <Grid item xs={9}>
+                    <Grid item xs={9} >
                         <StylesCaptionTitel
                             Color="common.white"
                             Stitel="ABOUT COMPANY"
@@ -20,6 +20,7 @@ const Index = () => {
                     </Grid>
                     <Grid xs/>
                 </Grid>
+                <Box sx={{height : "5rem" , display : {sx : "block" , sm : "none"}}}>ddddddddddddddddddd</Box>
                 <Grid container>
                     <Grid xs/>
                     <Grid xs={9} className={styles.displayPrices}>

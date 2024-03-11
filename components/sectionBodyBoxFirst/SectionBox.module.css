@@ -16,6 +16,7 @@
 }
 .mtSection{
     margin-top: 5rem;
+    margin-bottom: 5rem;
     flex-direction: column !important;
 }
 .boxBodyTextLine{
@@ -67,7 +68,7 @@
         height: 70vh;
     }
     .bodySectionImgSecond{
-        height: 70vh !important;
+        height: 40rem !important;
     }
     .bodySecchild{
         display: flex !important;

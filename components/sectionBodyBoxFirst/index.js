@@ -13,8 +13,7 @@ const Index = () => {
         axios.get("https://fakestoreapi.com/products")
             .then(res => {
                 setcloth(res.data.slice(0 , 1))
-                setclothBox(res.data.slice(3 , 4))
-                console.log(cloth)
+                setclothBox(res.data.slice(4 , 5))
             })
     },[]);
     return (
@@ -47,18 +46,16 @@ const Index = () => {
                             <Grid container className={styles.mtSection}>
                                 <Grid item xs={12}>
                                     {
-                                        cloth.map((cloth , index) =>(
+                                        clothBox.map((cloth , index) =>(
                                             <StylesCaptionTitelList
                                                 key={index}
                                                 Color="common.white"
                                                 STitel={cloth.category}
-                                                MTitel="WORKING ON EXCLUSIVE PROJECTS"
+                                                MTitel={cloth.title}
                                                 Bcaptiob={cloth.description}
                                             />
                                         ))
                                     }
-                                </Grid>
-                                <Grid item xs={12}>
                                     <Button
                                         sx={{mt : 5}}
                                         color="primary" variant="contained">

@@ -1,10 +1,11 @@
 .BtnSubmit{
-    width: 130%;
-    height: 3rem;
+    width: 120%;
+    height: 3.5rem;
     margin-left: 1rem;
     border-radius: 20px;
     font-size: 12px;
     text-align: center;
+    margin-top: 2rem;
 }
 .TitelCTA{
     margin-top: 1rem;

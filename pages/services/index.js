@@ -26,7 +26,7 @@ export default function Home() {
                 <Grid item xs={12} sm={6} className={styles.boxBodyThree}>
                     <Grid container>
                         <Grid item xs/>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} sm={9} sx={{py : { xs : 0 , sm : 10}}}>
                             <StylesCaptionTitelList
                                 Color="common.white"
                                 STitel="ABOUT COMPANY"
@@ -45,20 +45,12 @@ export default function Home() {
                         <Grid item xs className={styles.SendEmailGrid}>
                             <Grid container>
                                 <Grid item xs/>
-                                <Grid item xs={10} sx={{mt : 8 , height : {xs : "25rem"}}}>
+                                <Grid item xs={9} sx={{mt : 9 , height : { sm : "28rem" , xs : "25rem"}}}>
                                     <StylesCaptionTitelList
                                         Color="common.white"
                                         STitel="ABOUT COMPANY"
-                                        MTitel="WE CREATE AND TURN"
-                                        Quotation="ssibilities, as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process."
-                                    />
-                                    <TextField
-                                        sx={{mt : 4}}
-                                        fullWidth
-                                        required
-                                        id="outlined-required"
-                                        label="Required"
-                                        defaultValue="Number"
+                                        MTitel="WE CREATE AND TURN INTO AND TURN INTO"
+                                        Quotation=" design ideas and solutions for any project we’re working on… During that process we carefully combine client’s guidelines, technical possibilities, as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process."
                                     />
                                 </Grid>
                                 <Grid item xs/>

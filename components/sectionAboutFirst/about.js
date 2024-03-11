@@ -42,7 +42,7 @@ const About = () => {
                                             clients!
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sx={{mt : 4 }}>
+                                    <Grid item xs={12} sx={{my : 4 }}>
                                         <Typography className={styles.boxBodyTextPar} variant="caption" component="p">
                                             All our team collaborates with our clients, across all of our 3 offices,
                                             which are located throughout the US. Our mission is to implement the

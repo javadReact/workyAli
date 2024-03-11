@@ -96,7 +96,7 @@ export default function Home({data}) {
                                     </Link>
                                 </Grid>
                                 <Grid item xs={3}>
-                                    <Button variant="contained" className={styles.BtnSubmit}>
+                                    <Button variant="outlined" className={styles.BtnSubmit}>
                                         Submit
                                     </Button>
                                 </Grid>
