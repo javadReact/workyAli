@@ -52,7 +52,7 @@ const Index = () => {
                                                 key={index}
                                                 Color="common.white"
                                                 STitel={cloth.category}
-                                                MTitel={cloth.title}
+                                                MTitel="WORKING ON EXCLUSIVE PROJECTS"
                                                 Bcaptiob={cloth.description}
                                             />
                                         ))

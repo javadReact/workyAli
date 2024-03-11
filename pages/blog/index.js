@@ -1,9 +1,8 @@
 import {Box, Breadcrumbs, Button, Grid, Link, TextField, Typography} from "@mui/material";
 import styles from "./Blog.module.css"
-import Image from "next/image";
-import {useEffect, useState} from "react";
 import axios from "axios";
 import Head from "next/head";
+import {useEffect} from "react";
 
 export default function Home({data}) {
     return (
@@ -32,9 +31,9 @@ export default function Home({data}) {
                         </Grid>
                     </Grid>
                     <Grid container>
-                        <Grid item xs={12} md={12} lg={8} spacing={4}>
+                        <Grid item md={12} lg={8}>
                             {
-                                data.map(singleBlog => (
+                                data.map((singleBlog) => (
                                     <Box key={singleBlog.id} sx={{my: 5}}>
                                         <Typography variant="h2" component="h1">
                                             {singleBlog.title}
@@ -118,7 +117,7 @@ export const getServerSideProps = async () =>{
             }
 
         }).catch(() =>{
-            return "خطایی پیش آمد";
+            // return alert("خطایی پیش آمد");
         })
     return{
         props: {
